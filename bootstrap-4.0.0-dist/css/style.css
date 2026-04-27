@@ -1,0 +1,86 @@
+/* =========================
+   1. GLOBAL VARIABLES
+   ========================= */
+:root {
+    --primary-color: #007bff;   /* Top bar + left line */
+    --background-color: #f8f9fa;
+    --text-color: #333;
+}
+
+
+/* =========================
+   2. RESET / BASE
+   ========================= */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+}
+
+
+/* =========================
+   3. HEADER (TOP BAR)
+   ========================= */
+header {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+
+/* =========================
+   4. SIDEBAR
+   ========================= */
+.sidebar {
+    background-color: var(--primary-color);
+    min-height: 100vh;
+    border-left: 6px solid var(--primary-color);
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+
+.sidebar a:hover {
+    background-color: rgba(255,255,255,0.2);
+}
+
+
+/* =========================
+   5. MAIN CONTENT
+   ========================= */
+main {
+    background-color: white;
+    min-height: 100vh;
+}
+
+
+/* =========================
+   6. FOOTER
+   ========================= */
+footer {
+    background-color: #b83f85;
+    color: white;
+}
+
+
+/* =========================
+   7. RESPONSIVENESS
+   ========================= */
+@media (max-width: 768px) {
+
+    /* Stack layout */
+    .sidebar {
+        min-height: auto;
+        border-left: none;
+        border-top: 5px solid var(--primary-color);
+    }
+
+    main {
+        min-height: auto;
+    }
+}
