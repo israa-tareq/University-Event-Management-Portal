@@ -1,86 +1,60 @@
-/* =========================
-   1. GLOBAL VARIABLES
-   ========================= */
 :root {
-    --primary-color: #007bff;   /* Top bar + left line */
+    --primary-color: #007bff;
+    --secondary-color: #06b6d4;
     --background-color: #f8f9fa;
-    --text-color: #333;
 }
 
-
-/* =========================
-   2. RESET / BASE
-   ========================= */
+/* الصفحة */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: var(--background-color);
+    background: var(--background-color);
 }
 
-
-/* =========================
-   3. HEADER (TOP BAR)
-   ========================= */
-header {
-    background-color: var(--primary-color);
-    color: white;
-}
-
-
-/* =========================
-   4. SIDEBAR
-   ========================= */
+/* SIDEBAR */
 .sidebar {
-    background-color: var(--primary-color);
+    background: var(--primary-color);
     min-height: 100vh;
-    border-left: 6px solid var(--primary-color);
 }
 
 .sidebar a {
     color: white;
-    text-decoration: none;
     display: block;
-    padding: 10px;
-    margin: 5px 0;
+    padding: 12px;
+    text-decoration: none;
     border-radius: 5px;
+    margin-bottom: 5px;
 }
 
 .sidebar a:hover {
-    background-color: rgba(255,255,255,0.2);
+    background: rgba(255,255,255,0.2);
 }
 
-
-/* =========================
-   5. MAIN CONTENT
-   ========================= */
+/* MAIN */
 main {
-    background-color: white;
+    background: white;
     min-height: 100vh;
+    padding: 20px;
 }
 
+/* تحسين العنوان */
+h2 {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
 
-/* =========================
-   6. FOOTER
-   ========================= */
+/* (اختياري) تحسين الجدول */
+.table {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* تحسين الـ badges */
+.badge {
+    padding: 6px 10px;
+    font-size: 13px;
+}
 footer {
-    background-color: #b83f85;
-    color: white;
-}
-
-
-/* =========================
-   7. RESPONSIVENESS
-   ========================= */
-@media (max-width: 768px) {
-
-    /* Stack layout */
-    .sidebar {
-        min-height: auto;
-        border-left: none;
-        border-top: 5px solid var(--primary-color);
-    }
-
-    main {
-        min-height: auto;
-    }
+    width: 100%;
 }
