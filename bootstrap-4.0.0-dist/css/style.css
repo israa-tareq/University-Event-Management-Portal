@@ -1,6 +1,6 @@
 :root {
-    --primary-color: #007bff;
-    --secondary-color: #06b6d4;
+    --primary-color: #ffa600;
+    --secondary-color: #b38300;
     --background-color: #f8f9fa;
 }
 
@@ -11,50 +11,75 @@ body {
     background: var(--background-color);
 }
 
+/* HEADER */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* USER INFO */
+.user-info {
+    font-size: 16px;
+}
+
+.user-name {
+    font-weight: bold;
+}
+
 /* SIDEBAR */
 .sidebar {
-    background: var(--primary-color);
+    background: linear-gradient(180deg, var(--primary-color), var(--secondary-color));
     min-height: 100vh;
+    padding-top: 15px;
 }
 
+/* روابط sidebar */
 .sidebar a {
     color: white;
-    display: block;
-    padding: 12px;
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
     text-decoration: none;
-    border-radius: 5px;
-    margin-bottom: 5px;
+    border-radius: 8px;
+    margin: 6px 10px;
+    transition: 0.3s;
+    font-size: 15px;
 }
 
+
+/* hover */
 .sidebar a:hover {
     background: rgba(255,255,255,0.2);
+    transform: translateX(5px);
 }
 
-/* MAIN */
+/* icon spacing */
+.sidebar i {
+    width: 20px;
+    text-align: center;
+}
+
+/* MAIN CONTENT */
 main {
     background: white;
     min-height: 100vh;
     padding: 20px;
 }
 
-/* تحسين العنوان */
+/* title */
 h2 {
-    font-weight: bold;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
-/* (اختياري) تحسين الجدول */
-.table {
-    background: white;
-    border-radius: 8px;
-    overflow: hidden;
-}
 
-/* تحسين الـ badges */
-.badge {
-    padding: 6px 10px;
-    font-size: 13px;
-}
-footer {
-    width: 100%;
+
+/* FOOTER */
+
+.footer {
+    background: #343a40 !important;
+    color: white !important;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
 }
