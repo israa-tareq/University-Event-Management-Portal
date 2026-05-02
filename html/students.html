@@ -48,8 +48,38 @@
 
             <!-- Main Content -->
             <main class="col-md-9 col-12 p-3">
-                <h2>Main Content</h2>
-                <p>This is where the specific content of the page will go, like tables, forms, event cards, etc.</p>
+                <h2>Student Registration</h2>
+
+<form id="studentForm" class="mb-4">
+    <input type="text" id="studentId" class="form-control mb-2" placeholder="Student ID" required>
+    <input type="email" id="email" class="form-control mb-2" placeholder="Email" required>
+    <input type="password" class="form-control mb-2" placeholder="Password" required>
+
+```
+<select id="role" class="form-control mb-2">
+    <option value="student">Student</option>
+    <option value="admin">Admin</option>
+</select>
+
+<button type="submit" class="btn btn-primary">Register</button>
+```
+
+</form>
+
+<h3>Student List</h3>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Email</th>
+            <th>Role</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody id="studentTable"></tbody>
+</table>
+
                 
             
             </main>
@@ -64,6 +94,66 @@
      </footer>
         </div>
     </div>
+<script>
+let students = [];
+let editIndex = -1;
 
+document.getElementById("studentForm").addEventListener("submit", function(e){
+    e.preventDefault();
+
+    let id = document.getElementById("studentId").value;
+    let email = document.getElementById("email").value;
+    let role = document.getElementById("role").value;
+
+    if (editIndex === -1) {
+        students.push({id, email, role});
+    } else {
+        students[editIndex] = {id, email, role};
+        editIndex = -1;
+    }
+
+    displayStudents();
+    this.reset();
+});
+
+function displayStudents(){
+    let table = document.getElementById("studentTable");
+    table.innerHTML = "";
+
+    students.forEach((s, index) => {
+        table.innerHTML += `
+            <tr>
+                <td>${s.id}</td>
+                <td>${s.email}</td>
+                <td>${s.role}</td>
+                <td>
+                    <button class="btn btn-warning btn-sm mr-2" onclick="editStudent(${index})">
+                        Edit
+                    </button>
+
+                    <button class="btn btn-danger btn-sm" onclick="deleteStudent(${index})">
+                        Delete
+                    </button>
+                </td>
+            </tr>
+        `;
+    });
+}
+
+function deleteStudent(index){
+    students.splice(index, 1);
+    displayStudents();
+}
+
+function editStudent(index){
+    let student = students[index];
+
+    document.getElementById("studentId").value = student.id;
+    document.getElementById("email").value = student.email;
+    document.getElementById("role").value = student.role;
+
+    editIndex = index;
+}
+</script>
    </body>
 </html>
