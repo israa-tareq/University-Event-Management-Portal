@@ -83,3 +83,45 @@ h2 {
     padding: 15px;
     margin-top: 20px;
 }
+
+/* Club Card Hover Effect */
+.club-card {
+    transition: all 0.3s ease;
+    border-radius: 15px;
+}
+
+.club-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Button Style Enhancement */
+.club-card button {
+    border-radius: 25px;
+    transition: 0.3s;
+}
+
+.club-card button:hover {
+    background-color: #0056b3;
+}
+
+/* Page background enhancement */
+body {
+    background-color: #f5f7fa;
+}
+
+/* Form card styling */
+.card {
+    border-radius: 15px;
+}
+
+/* Table spacing */
+table {
+    margin-top: 10px;
+}
+
+/* Headings spacing */
+h4 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
