@@ -47,9 +47,81 @@
 </aside>
             <!-- Main Content -->
             <main class="col-md-9 col-12 p-3">
-                <h2>Main Content</h2>
-                <p>This is where the specific content of the page will go, like tables, forms, event cards, etc.</p>
-                
+                <!-- Page Title -->
+                <h2 class="mb-4">Organization & Club Management</h2>
+
+
+<!-- Club Profiles Section -->
+<h4>Club Profiles</h4>
+
+<div class="row" id="clubContainer">
+    <!-- Clubs will be added here dynamically -->
+</div>
+            
+
+    <!-- Leadership Table Section -->
+<h4 class="mt-4">Leadership</h4>
+
+<table class="table table-striped">
+
+    <!-- Table Header -->
+    <thead>
+        <tr>
+            <th>Club</th>
+            <th>President</th>
+            <th>Officers</th>
+        </tr>
+    </thead>
+
+    <!-- Table Body -->
+     <tbody id="leaderTable"></tbody>
+        <tr>
+    <td>Art Club</td>
+    <td>Ahmed</td>
+    <td>3 Officers</td>
+</tr>
+<tr>
+    <td>IT Club</td>
+    <td>Fatima</td>
+    <td>5 Officers</td>
+</tr>
+    </tbody>
+
+</table>
+
+<!-- Create New Club Form -->
+<h4 class="mt-4">Create New Club</h4>
+
+<form id="clubForm">
+
+    <!-- Club Name -->
+    <div class="form-group">
+        <label>Club Name</label>
+        <input type="text" id="clubName" class="form-control" required>
+    </div>
+
+    <!-- Advisor -->
+    <div class="form-group">
+        <label>Advisor</label>
+        <input type="text" id="advisor" class="form-control" required>
+    </div>
+
+    <!-- President -->
+    <div class="form-group">
+        <label>President</label>
+        <input type="text" id="president" class="form-control" required>
+    </div>
+
+    <!-- Officers -->
+    <div class="form-group">
+        <label>Number of Officers</label>
+        <input type="number" id="officers" class="form-control" required>
+    </div>
+
+    <!-- Submit Button -->
+    <button class="btn btn-primary">Create Club</button>
+
+</form>
             
             </main>
         </div>
