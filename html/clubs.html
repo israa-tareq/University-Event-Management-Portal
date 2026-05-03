@@ -7,134 +7,157 @@
     
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome for User Icon -->
+    
+    <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-    <!-- Your custom styles -->
+    
+    <!-- Custom CSS -->
     <link href="css/style.css" rel="stylesheet">
 </head>
+
 <body>
-    <!-- Container for the whole layout -->
-    <div class="container-fluid">
-        <!-- Header Section (Sticky) -->
-        <div class="row">
-            <header class="col-12 bg-secondary text-white d-flex justify-content-between align-items-center py-3">
-                <h1 class="m-0">University Event Management</h1>
-                <!-- User Icon and Name -->
-                <div class="user-info d-flex align-items-center">
-                    <i class="fas fa-user-circle fa-2x mr-2"></i> <!-- Font Awesome User Icon -->
-                    <span class="user-name">username</span> <!-- Placeholder for logged-in user's name -->
-                </div>
-            </header>
-        </div>
 
-        <!-- Main Content Area with Sidebar -->
-        <div class="row">
-            <!-- Sidebar with Links -->
+<div class="container-fluid">
+
+    <!-- Header -->
+    <div class="row">
+        <header class="col-12 bg-secondary text-white d-flex justify-content-between align-items-center py-3">
+            <h1 class="m-0">University Event Management</h1>
+
+            <div class="user-info d-flex align-items-center">
+                <i class="fas fa-user-circle fa-2x mr-2"></i>
+                <span class="user-name">username</span>
+            </div>
+        </header>
+    </div>
+
+    <!-- Layout -->
+    <div class="row">
+
+        <!-- Sidebar -->
         <aside class="col-md-2 col-12 p-3 sidebar">
-    <ul class="list-unstyled">
+            <ul class="list-unstyled">
 
-        <li><a href="index.html"><i class="fas fa-home mr-2"></i> Home</a></li>
+                <li><a href="index.html"><i class="fas fa-home mr-2"></i> Home</a></li>
+                <li><a href="events.html"><i class="fas fa-calendar-alt mr-2"></i> Events</a></li>
+                <li><a href="clubs.html"><i class="fas fa-users mr-2"></i> Clubs</a></li>
+                <li><a href="dashboard.html"><i class="fas fa-tachometer-alt mr-2"></i> Dashboard</a></li>
+                <li><a href="rooms.html"><i class="fas fa-door-open mr-2"></i> Rooms</a></li>
 
-        <li><a href="events.html"><i class="fas fa-calendar-alt mr-2"></i> Events</a></li>
+                <!-- Fixed Students Link -->
+                <li>
+                    <a href="students.html">
+                        <i class="fas fa-user-graduate mr-2"></i> Students
+                    </a>
+                </li>
 
-        <li><a href="clubs.html"><i class="fas fa-users mr-2"></i> Clubs</a></li>
+            </ul>
+        </aside>
 
-        <li><a href="dashboard.html"><i class="fas fa-tachometer-alt mr-2"></i> Dashboard</a></li>
-
-        <li><a href="rooms.html"><i class="fas fa-door-open mr-2"></i> Rooms</a></li>
-
-    </ul>
-</aside>
-            <!-- Main Content -->
-            <main class="col-md-9 col-12 p-3">
-                <!-- Page Title -->
-                <h2 class="mb-4">Organization & Club Management</h2>
-
-
-<!-- Club Profiles Section -->
-<h4>Club Profiles</h4>
-
-<div class="row" id="clubContainer">
-    <!-- Clubs will be added here dynamically -->
-</div>
-            
-
-    <!-- Leadership Table Section -->
-<h4 class="mt-4">Leadership</h4>
-
-<table class="table table-striped">
-
-    <!-- Table Header -->
-    <thead>
-        <tr>
-            <th>Club</th>
-            <th>President</th>
-            <th>Officers</th>
-        </tr>
-    </thead>
-
-    <!-- Table Body -->
-     <tbody id="leaderTable"></tbody>
-        <tr>
-    <td>Art Club</td>
-    <td>Ahmed</td>
-    <td>3 Officers</td>
-</tr>
-<tr>
-    <td>IT Club</td>
-    <td>Fatima</td>
-    <td>5 Officers</td>
-</tr>
-    </tbody>
-
-</table>
-
-<!-- Create New Club Form -->
-<h4 class="mt-4">Create New Club</h4>
-
-<form id="clubForm">
-
-    <!-- Club Name -->
-    <div class="form-group">
-        <label>Club Name</label>
-        <input type="text" id="clubName" class="form-control" required>
-    </div>
-
-    <!-- Advisor -->
-    <div class="form-group">
-        <label>Advisor</label>
-        <input type="text" id="advisor" class="form-control" required>
-    </div>
-
-    <!-- President -->
-    <div class="form-group">
-        <label>President</label>
-        <input type="text" id="president" class="form-control" required>
-    </div>
-
-    <!-- Officers -->
-    <div class="form-group">
-        <label>Number of Officers</label>
-        <input type="number" id="officers" class="form-control" required>
-    </div>
-
-    <!-- Submit Button -->
-    <button class="btn btn-primary">Create Club</button>
-
-</form>
-            
-            </main>
-        </div>
         <!-- Main Content -->
+        <main class="col-md-9 col-12 p-4">
 
+            <h2 class="mb-4">Organization & Club Management</h2>
 
-        <!-- Footer Section -->
-        <div class="row">
-            <footer class="col-12 bg-secondary text-white text-center py-3">
-          <p class="m-0">© 2026 University Event Portal</p>
-            </footer>
-        </div>
+            <!-- Club Profiles -->
+            <h4 class="mb-3">Club Profiles</h4>
+
+            <div class="row">
+
+                <!-- Club 1 -->
+                <div class="col-md-4">
+                    <div class="card club-card shadow-sm mb-4 text-center p-4">
+                        <img src="https://picsum.photos/100" class="mx-auto rounded-circle mb-3">
+                        <h5>Art Club</h5>
+                        <p class="text-muted">Advisor: Dr. Sara</p>
+                        <p class="font-weight-bold">Members: 25</p>
+                        <button class="btn btn-primary btn-block">Join Club</button>
+                    </div>
+                </div>
+
+                <!-- Club 2 -->
+                <div class="col-md-4">
+                    <div class="card club-card shadow-sm mb-4 text-center p-4">
+                        <img src="https://picsum.photos/100" class="mx-auto rounded-circle mb-3">
+                        <h5>IT Club</h5>
+                        <p class="text-muted">Advisor: Eng. Ali</p>
+                        <p class="font-weight-bold">Members: 40</p>
+                        <button class="btn btn-primary btn-block">Join Club</button>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Leadership Table -->
+            <h4 class="mt-4">Leadership</h4>
+
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Club</th>
+                        <th>President</th>
+                        <th>Officers</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Art Club</td>
+                        <td>Ahmed</td>
+                        <td>3 Officers</td>
+                    </tr>
+                    <tr>
+                        <td>IT Club</td>
+                        <td>Fatima</td>
+                        <td>5 Officers</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- Create New Club -->
+            <h4 class="mt-4">Create New Club</h4>
+
+            <div class="card shadow-sm p-4 mt-3">
+
+                <form>
+
+                    <div class="form-group">
+                        <label>Club Name</label>
+                        <input type="text" class="form-control" placeholder="Enter club name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Advisor</label>
+                        <input type="text" class="form-control" placeholder="Enter advisor name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>President</label>
+                        <input type="text" class="form-control" placeholder="Enter president name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Number of Officers</label>
+                        <input type="number" class="form-control" placeholder="e.g. 5" required>
+                    </div>
+
+                    <button class="btn btn-primary btn-block mt-3">Create Club</button>
+
+                </form>
+
+            </div>
+
+        </main>
     </div>
 
-   </body>
+    <!-- Footer -->
+    <div class="row">
+        <footer class="col-12 bg-secondary text-white text-center py-3">
+            <p class="m-0">© 2026 University Event Portal</p>
+        </footer>
+    </div>
+
+</div>
+
+</body>
 </html>
