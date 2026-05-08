@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"> 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home | University Event Management</title>
-    
-    <!-- Bootstrap CSS -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome for User Icon -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-    <!-- Your custom styles -->
-    <link href="C:\Users\Switch Store\Desktop\University-Event-Management-Portal\bootstrap-4.0.0-dist\css\style.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>University Event Management</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome for User Icon -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <!-- Custom Styles -->
+     <link rel="stylesheet" href="../css/style.css" >
 </head>
 <body>
     <!-- Container for the whole layout -->
@@ -26,121 +26,128 @@
                 </div>
             </header>
         </div>
-  
 
         <!-- Main Content Area with Sidebar -->
         <div class="row">
-       <aside class="col-md-2 col-12 p-3 sidebar">
-    <ul class="list-unstyled">
-
-        <li><a href="index.html"><i class="fas fa-home mr-2"></i> Home</a></li>
-
-        <li><a href="events.html"><i class="fas fa-calendar-alt mr-2"></i> Events</a></li>
-
-        <li><a href="clubs.html"><i class="fas fa-users mr-2"></i> Clubs</a></li>
-
-        <li><a href="dashboard.html"><i class="fas fa-tachometer-alt mr-2"></i> Dashboard</a></li>
-
-        <li><a href="rooms.html"><i class="fas fa-door-open mr-2"></i> Rooms</a></li>
-
-        <li><a href="students.html"><i class="fas fa-user-graduate mr-2"></i> Students</a></li>
-
-
-    </ul>
-</aside>
+            <aside class="col-md-2 col-12 p-3 sidebar">
+                <ul class="list-unstyled">
+                    <li><a href="index.html"><i class="fas fa-home mr-2"></i> Home</a></li>
+                    <li><a href="events.html"><i class="fas fa-calendar-alt mr-2"></i> Events</a></li>
+                    <li><a href="clubs.html"><i class="fas fa-users mr-2"></i> Clubs</a></li>
+                    <li><a href="dashboard.html"><i class="fas fa-tachometer-alt mr-2"></i> Dashboard</a></li>
+                    <li><a href="rooms.html"><i class="fas fa-door-open mr-2"></i> Rooms</a></li>
+                    <li><a href="students.html"><i class="fas fa-user-graduate mr-2"></i> Students</a></li>
+                </ul>
+            </aside>
 
             <!-- Main Content -->
-          <main class="col-md-10 col-12 p-4">
+            <main class="col-md-10 col-12 p-4">
 
-    
+                <!-- Event Cards Section -->
+                <div class="container mt-5">
+                    <h4 class="mb-4">Featured Events</h4>
+                    <div class="row">
+                        <!-- Event 1 -->
+                        <div class="col-md-4">
+                            <div class="card shadow">
+                                <img src="../images/aiworkshop.jpeg" class="card-img-top" alt="Event Image">
+                                <div class="card-body">
+                                    <h5 class="card-title">AI Workshop </h5>
+                                    <p class="card-text">This is a short description of the event.</p>
 
+                                    <span class="badge badge-primary mr-2">Open</span>
 
-    <!--  Featured Events -->
-    <div class="mb-4">
-        <h2 class="mb-3">Featured Events</h2>
+                                    <br><br>
 
-        <div class="row">
+                                </div>
+                            </div>
+                        </div>
 
-            <!-- Event 1 -->
-            <div class="col-md-4 mb-4">
-                <div class="card event-card shadow-sm">
-                    <img src="../images/aiworkshop.jpeg" class="card-img-top event-img" alt="Event">
-                    <div class="card-body">
-                        <h5 class="card-title">AI Workshop</h5>
-                        <p class="card-text text-muted">Introduction to Artificial Intelligence</p>
-                        <span class="badge badge-primary">Open</span>
+                        <!-- Event 2 -->
+                        <div class="col-md-4">
+                            <div class="card shadow">
+                                <img src="../images/sports.jpeg" class="card-img-top" alt="Event Image">
+                                <div class="card-body">
+                                    <h5 class="card-title">Sports marathon</h5>
+                                    <p class="card-text">Student coordinated sports activities</p>
+
+                                    <span class="badge badge-primary">Open</span>
+
+                                    <br><br>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Event 3 -->
+                        <div class="col-md-4">
+                            <div class="card shadow">
+                                <img src="../images/grads.png" class="card-img-top" alt="Event Image">
+                                <div class="card-body">
+                                    <h5 class="card-title">Graduation </h5>
+                                    <p class="card-text">Celebrate achievements with class of 2025</p>
+
+                                    <span class="badge badge-danger">Full</span>
+
+                                    <br><br>
+
+                            
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
-            </div>
 
-            <!-- Event 2 -->
-            <div class="col-md-4 mb-4">
-                <div class="card event-card shadow-sm">
-                    <img src="../images/hackathon.jpg" class="card-img-top event-img" alt="Event">
-                    <div class="card-body">
-                        <h5 class="card-title">Hackathon</h5>
-                        <p class="card-text text-muted">24-hour coding competition</p>
-                        <span class="badge badge-danger">Full</span>
+                <!--  big events -->
+                <div class="container mt-5">
+                    <h4 class="mb-3">Join Our Big Event</h4>
+                    <div class="row align-items-center">
+                        <div class="col-md-6">
+                            <h5 class="mb-3">Hackathon 2026</h5>
+                            <p class="lead">The ultimate coding challenge awaits! Join now to showcase your skills and collaborate with peers.</p>
+                        </div>
+                        <div class="col-md-6">
+                            <img src="../images/hackathon.jpg" alt="Hackathon Image" class="img-fluid rounded shadow">
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Event 3 -->
-            <div class="col-md-4 mb-4">
-                <div class="card event-card shadow-sm">
-                    <img src="../images/designmeetup.webp" class="card-img-top event-img" alt="Event">
-                    <div class="card-body">
-                        <h5 class="card-title">Design Meetup</h5>
-                        <p class="card-text text-muted">UI/UX community session</p>
-                        <span class="badge badge-primary">Open</span>
+                <!-- Student Spotlight Section -->
+                <div class="container mt-5">
+                    <h4 class="mb-3">Student Spotlight</h4>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="card shadow">
+                                <div class="card-body">
+                                    <h5 class="card-title">Student: Maria Louis</h5>
+                                    <p class="card-text">"The Hackathon 2025 was an amazing experience. I learned so much about teamwork and coding in real-time. Highly recommend to any developer!"</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="card shadow">
+                                <div class="card-body">
+                                    <h5 class="card-title">Student: Sarah Ahmed </h5>
+                                    <p class="card-text">"Attending the graduation event last year was a life-changing experience. It was an emotional day to see everyone’s hard work pay off!"</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
 
+            </main>
         </div>
-    </div>
-
-
-    <!--  Features Section -->
-    <div>
-        <h4 class="mb-3">What You Can Do</h4>
-
-        <div class="row text-center">
-
-            <div class="col-md-4 mb-3">
-                <i class="fas fa-calendar-check fa-2x mb-2 text-secondary"></i>
-                <h6>Browse Events</h6>
-                <p class="text-muted small">Find and join university events easily</p>
-            </div>
-
-            <div class="col-md-4 mb-3">
-                <i class="fas fa-users fa-2x mb-2 text-secondary"></i>
-                <h6>Join Clubs</h6>
-                <p class="text-muted small">Connect with student organizations</p>
-            </div>
-
-            <div class="col-md-4 mb-3">
-                <i class="fas fa-door-open fa-2x mb-2 text-secondary"></i>
-                <h6>Manage Rooms</h6>
-                <p class="text-muted small">Check availability of spaces</p>
-            </div>
-
-        </div>
-    </div>
-
-</main>
-        </div>
-        <!-- Main Content -->
-
 
         <!-- Footer Section -->
         <div class="row">
-           <footer class="col-12 custom-header d-flex justify-content-between align-items-center py-3 px-4">
-            <p class="m-0">© 2026 University Event Portal</p>
-
-     </footer>
+            <footer class="col-12 custom-header d-flex justify-content-between align-items-center py-3 px-4">
+                <p class="m-0">© 2026 University Event Portal</p>
+            </footer>
         </div>
     </div>
 
-   </body>
+   
+</body>
 </html>

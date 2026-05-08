@@ -1,10 +1,10 @@
 :root {
-    --primary: #6f4e37;   /* قهوة غامقة */
-    --secondary: #c4a484; /* قهوة فاتحة */
-    --accent: #a67c52;    /* بني متوسط */
-    --dark: #2b1d14;      /* بني غامق جدًا */
-    --light: #f5f0e6;     /* كريمي */
-    --text: #3e2c23;      /* بني للنص */
+    --primary: #6f4e37;  /* dark coffee */
+    --secondary: #c4a484; /* light coffee */
+    --accent: #a67c52;    /* medium brown */
+    --dark: #2b1d14;      /* very dark brown */
+    --light: #f5f0e6;     /* cream */
+    --text: #3e2c23;      /* brown font */
 }
 /* ================= BODY ================= */
 body {
