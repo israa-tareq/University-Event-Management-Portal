@@ -1,127 +1,152 @@
 :root {
-    --primary-color: #ffa600;
-    --secondary-color: #b38300;
-    --background-color: #f8f9fa;
+    --primary: #6f4e37;   /* قهوة غامقة */
+    --secondary: #c4a484; /* قهوة فاتحة */
+    --accent: #a67c52;    /* بني متوسط */
+    --dark: #2b1d14;      /* بني غامق جدًا */
+    --light: #f5f0e6;     /* كريمي */
+    --text: #3e2c23;      /* بني للنص */
 }
-
-/* الصفحة */
+/* ================= BODY ================= */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: var(--background-color);
+    background: linear-gradient(135deg, #f5f0e6, #e6ccb2, #c4a484);
+    color: var(--text);
 }
 
-/* HEADER */
-header {
+/* ================= HEADER ================= */
+.custom-header {
+    background: linear-gradient(135deg, #f5f0e6, #c4a484);
+    color: #3e2c23;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    border-radius: 0 0 20px 20px;
     position: sticky;
     top: 0;
     z-index: 1000;
+    padding: 15px 25px;
 }
-
-/* USER INFO */
-.user-info {
-    font-size: 16px;
-}
-
-.user-name {
+.custom-header h1 {
+    font-size: 20px;
     font-weight: bold;
+    color: #3e2c23 !important;
 }
 
-/* SIDEBAR */
+.user-box {
+    background: rgba(255,255,255,0.2);
+    padding: 6px 12px;
+    border-radius: 30px;
+    backdrop-filter: blur(6px);
+}
+
+/* ================= SIDEBAR ================= */
 .sidebar {
-    background: linear-gradient(180deg, var(--primary-color), var(--secondary-color));
+    background: linear-gradient(180deg, var(--primary), var(--secondary));
     min-height: 100vh;
-    padding-top: 15px;
+    padding-top: 20px;
+    box-shadow: 4px 0 15px rgba(0,0,0,0.1);
 }
 
-/* روابط sidebar */
 .sidebar a {
     color: white;
     display: flex;
     align-items: center;
     padding: 12px 15px;
     text-decoration: none;
-    border-radius: 8px;
-    margin: 6px 10px;
+    border-radius: 10px;
+    margin: 8px 10px;
     transition: 0.3s;
-    font-size: 15px;
 }
 
-
-/* hover */
 .sidebar a:hover {
-    background: rgba(255,255,255,0.2);
-    transform: translateX(5px);
+    background: linear-gradient(135deg, #f5f0e6, #3e2c23);
+    color: #2b1d14;
+    transform: translateX(8px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
 }
-
-/* icon spacing */
-.sidebar i {
-    width: 20px;
-    text-align: center;
-}
-
-/* MAIN CONTENT */
+/* ================= MAIN ================= */
 main {
-    background: white;
+    background: rgba(255,255,255,0.8);
+    backdrop-filter: blur(10px);
     min-height: 100vh;
     padding: 20px;
-}
-
-/* title */
-h2 {
-    margin-bottom: 15px;
-}
-
-
-
-/* FOOTER */
-
-.footer {
-    background: #343a40 !important;
-    color: white !important;
-    text-align: center;
-    padding: 15px;
-    margin-top: 20px;
-}
-
-/* Club Card Hover Effect */
-.club-card {
-    transition: all 0.3s ease;
     border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+}
+
+/* ================= CARDS ================= */
+.club-card {
+    border: none;
+    border-radius: 20px;
+    overflow: hidden;
+    background: white;
+    transition: 0.3s ease;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
 }
 
 .club-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
 }
 
-/* Button Style Enhancement */
-.club-card button {
+/* ================= BUTTONS ================= */
+button, .btn {
     border-radius: 25px;
     transition: 0.3s;
 }
 
-.club-card button:hover {
-    background-color: #0056b3;
+button:hover, .btn:hover {
+    transform: scale(1.05);
 }
 
-/* Page background enhancement */
-body {
-    background-color: #f5f7fa;
-}
-
-/* Form card styling */
-.card {
-    border-radius: 15px;
-}
-
-/* Table spacing */
+/* ================= TABLE ================= */
 table {
-    margin-top: 10px;
+    margin-top: 15px;
+    border-radius: 10px;
+    overflow: hidden;
+    background: white;
 }
 
-/* Headings spacing */
-h4 {
+/* ================= FORMS ================= */
+input, select, textarea {
+    border-radius: 10px !important;
+    padding: 10px !important;
+    border: 1px solid #ddd !important;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: var(--primary) !important;
+    box-shadow: 0 0 0 3px rgba(255,183,3,0.2) !important;
+}
+
+/* USER BOX */
+.user-info {
+    background: rgba(255,255,255,0.5);
+    padding: 6px 15px;
+    border-radius: 30px;
+    color: #3e2c23;
+}
+.user-info:hover {
+    background: rgba(255,255,255,0.35);
+    transform: scale(1.05);
+}
+
+.user-name {
+    font-weight: 600;
+}
+.custom-thead {
+    background: linear-gradient(135deg, #6f4e37, #c4a484) !important;
+    color: #f5f0e6 !important;
+}
+
+.custom-thead th {
+    border: none;
+}
+
+/* ================= FOOTER ================= */
+.custom-footer {
+    background: linear-gradient(135deg, #f5f0e6, #c4a484);
+    color: #3e2c23;
+    text-align: center;
+    padding: 15px;
     margin-top: 20px;
-    margin-bottom: 10px;
 }
