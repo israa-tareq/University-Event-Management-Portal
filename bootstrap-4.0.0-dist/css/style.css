@@ -125,3 +125,13 @@ h4 {
     margin-top: 20px;
     margin-bottom: 10px;
 }
+
+
+
+.club-card img.rounded-circle {
+    width: 150px;  
+    height: 150px;
+    object-fit: cover; 
+    border-radius: 50%;  
+    margin: 0 auto;  
+}
